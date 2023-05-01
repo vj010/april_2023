@@ -30,7 +30,7 @@ def dfs(node, visited, disc, subtree_sum, node_values, parent, low, total_sum, b
 
 
 def get_bridges(adj, node_values):
-    print(len(node_values))
+    # print(len(node_values))
     disc = [np.Inf for i in range(len(adj))]
     low = [np.Inf for i in range(len(adj))]
     visited = [False for i in range(len(adj))]
@@ -55,6 +55,8 @@ def custom_comparator(a, b):
         return -1
     if a[0] == b[0] and a[1] == b[1] and a[2] < b[2]:
         return -1
+    if a[0] == b[0] and a[1] == b[1] and a[2] == b[2]:
+        return 0
     return 1
 
 
